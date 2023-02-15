@@ -114,4 +114,65 @@ mysql> select * from employee_payroll;
 |  3 | Charlie | M      | 6000000.88 | 2020-11-21 |
 +----+---------+--------+------------+------------+
 3 rows in set (0.00 sec)
+mysql> SELECT SUM(salary) FROM employee_payroll
+    -> ;
++-------------+
+| SUM(salary) |
++-------------+
+|  9000002.64 |
++-------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT SUM(salary) FROM employee_payroll
+    -> WHERE gender = 'M' GROUP BY gender;
++-------------+
+| SUM(salary) |
++-------------+
+|  9000002.64 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select avg(salary) from employee_payroll
+    -> where gender = 'M' group by gender;
++--------------------+
+| avg(salary)        |
++--------------------+
+| 3000000.8800000004 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select max(salary) from employee_payroll
+    -> where gender = 'm' group by gender;
++-------------+
+| max(salary) |
++-------------+
+|  6000000.88 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select count(salary) from employee_payroll
+    -> where gender = 'm' group by gender;
++---------------+
+| count(salary) |
++---------------+
+|             3 |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> select gender, count(salary) from employee_payroll group by gender;
++--------+---------------+
+| gender | count(salary) |
++--------+---------------+
+| M      |             3 |
++--------+---------------+
+1 row in set (0.00 sec)
+
+mysql> select name, gender, min(salary) from employee_payroll;
++------+--------+-------------+
+| name | gender | min(salary) |
++------+--------+-------------+
+| Bill | M      |  1000000.88 |
++------+--------+-------------+
+1 row in set (0.00 sec)
+
 mysql>
