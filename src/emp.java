@@ -93,4 +93,25 @@ mysql> select * from employee_payroll
 +----+---------+--------+------------+------------+
 3 rows in set (0.01 sec)
 
+mysql> update employee_payroll set gender = 'M' where name = 'Bill';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update employee_payroll set gender = 'F' where name = 'Terisa';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update employee_payroll set gender = 'M' where name = 'Charlie';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from employee_payroll;
++----+---------+--------+------------+------------+
+| id | name    | gender | salary     | start      |
++----+---------+--------+------------+------------+
+|  1 | Bill    | M      | 1000000.88 | 2018-01-03 |
+|  2 | Terisa  | F      | 2000000.88 | 2019-05-13 |
+|  3 | Charlie | M      | 6000000.88 | 2020-11-21 |
++----+---------+--------+------------+------------+
+3 rows in set (0.00 sec)
 mysql>
