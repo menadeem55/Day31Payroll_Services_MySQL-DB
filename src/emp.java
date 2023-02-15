@@ -56,4 +56,11 @@ mysql> desc employee_payroll;
 +--------+--------------+------+-----+---------+----------------+
 5 rows in set (0.02 sec)
 
+mysql> insert into employee_payroll (name, salary, start) values	# inserting values table
+    -> ('Bill', 1000000.88, '2018-01-03' ),
+    -> ('Terisa', 2000000.88, '2019-05-13' ),
+    -> ('Charlie', 6000000.88, '2020-11-21' );
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
 mysql>
