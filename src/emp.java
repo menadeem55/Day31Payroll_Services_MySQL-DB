@@ -44,6 +44,15 @@ mysql> select database();
 +-----------------+
 1 row in set (0.00 sec)
 
+mysql> create table employee_payroll(  # Crete table employee_payroll..
+    -> id int not null auto_increment,
+    -> name varchar(30) not null,
+    -> salary double not null,
+    -> startdate date not null,
+    -> primary key (id)
+    -> );
+Query OK, 0 rows affected (0.08 sec)
+  
 mysql> desc employee_payroll;
 +--------+--------------+------+-----+---------+----------------+
 | Field  | Type         | Null | Key | Default | Extra          |
