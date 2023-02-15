@@ -63,4 +63,13 @@ mysql> insert into employee_payroll (name, salary, start) values	# inserting val
 Query OK, 3 rows affected (0.01 sec)
 Records: 3  Duplicates: 0  Warnings: 0
 
+mysql> select * from employee_payroll;
++----+---------+--------+------------+------------+
+| id | name    | gender | salary     | start      |
++----+---------+--------+------------+------------+
+|  1 | Bill    | M      |  450000.55 | 2018-01-03 |
+|  2 | Terisa  | F      | 2000000.88 | 2019-05-13 |
+|  3 | Charlie | M      | 6000000.88 | 2020-11-21 |
++----+---------+--------+------------+------------+
+3 rows in set (0.02 sec)
 mysql>
