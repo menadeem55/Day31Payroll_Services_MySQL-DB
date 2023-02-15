@@ -4,7 +4,7 @@ Microsoft Windows [Version 10.0.19045.2486]
 C:\Users\menad>mysql -u root -p
 Enter password: ********
 Welcome to the MySQL monitor.  Commands end with ; or \g.
-Your MySQL connection id is 18
+Your MySQL connection id is 19
 Server version: 8.0.31 MySQL Community Server - GPL
 
 Copyright (c) 2000, 2022, Oracle and/or its affiliates.
@@ -32,7 +32,7 @@ mysql> show databases;
 | performance_schema |
 | sys                |
 +--------------------+
-12 rows in set (0.01 sec)
+12 rows in set (0.00 sec)
 
 mysql> use payroll_service;
 Database changed
@@ -43,5 +43,17 @@ mysql> select database();
 | payroll_service |
 +-----------------+
 1 row in set (0.00 sec)
+
+mysql> desc employee_payroll;
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| id     | int unsigned | NO   | PRI | NULL    | auto_increment |
+| name   | varchar(150) | NO   |     | NULL    |                |
+| gender | char(1)      | YES  |     | NULL    |                |
+| salary | double       | NO   |     | NULL    |                |
+| start  | date         | NO   |     | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
+5 rows in set (0.02 sec)
 
 mysql>
